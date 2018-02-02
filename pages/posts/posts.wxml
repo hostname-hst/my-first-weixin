@@ -1,0 +1,19 @@
+<!--pages/posts/posts.wxml-->
+<import src="post-item/post-item-template.wxml"/>
+<view>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="5000" duration="1000" catchtap='sweiperDetailPage'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" data-postId="{{index+1}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <block wx:for="{{postData}}">
+    <view class='post-container'>
+    <view bindtap='onGoDetail' data-postId="{{item.postId}}">
+     <template is="postItem" data="{{item}}"/>
+     <!-- <template is="postItem" data="{{...item}}"/>...可以在模板里面省略item -->
+     </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,61 @@
+<import src="../stars/stars-template.wxml" />
+<view class="container">
+  <image class="head-img" src="{{movie.img}}" mode="aspectFill" />
+  <view class="head-img-hover" data-src="{{movie.movieImg}}" catchtap="viewMoviePostImg">
+    <text class="main-title">{{movie.nm}}</text>
+    <text class="sub-title">{{movie.src + " · "+movie.rt}}</text>
+    <view class="like">
+      <text class="highlight-font">
+        {{movie.wish}}
+      </text>
+      <text class="plain-font">
+        人喜欢
+      </text>
+      <!-- <text class="highlight-font">
+        
+      </text>
+      <text class="plain-font">
+        条评论
+      </text> -->
+    </view>
+  </view>
+  <image class="movie-img" src="{{movie.movieImg}}" data-src="{{movie.movieImg}}" catchtap="viewMoviePostImg"/>
+  <view class="summary">
+    <view class="original-title">
+      <text>{{movie.scm}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <template is="starsTemplate" data="{{sc:movie.sc, stars:0}}" />
+    </view>
+    <view class="flex-row">
+      <text class="mark">导演</text>
+      <text>{{movie.dir}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">影人</text>
+      <text>{{movie.star}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">类型</text>
+      <text>{{movie.cat}}</text>
+    </view>
+  </view>
+  <view class="hr"></view>
+  <view class="synopsis">
+    <text class="synopsis-font">剧情简介</text>
+    <text class="summary-content">{{movie.dra}}</text>
+  </view>
+  <!-- <view class="hr"></view>
+  <view class="cast">
+    <text class="cast-font"> 影人</text>
+    <scroll-view class="cast-imgs" scroll-x="true" style="width:100%">
+      <block wx:for="{{movie.photos}}" wx:for-item="item">
+        <view class="cast-container">
+          <image class="cast-img" src="{{item}}"></image>
+          <text class="cast-name">{{item}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view> -->
+</view>

@@ -1,0 +1,12 @@
+<import src="../stars/stars-template.wxml" />
+<template name="movieTemplate">
+  <view class='movie-container' data-id="{{id}}" catchtap='toMovieDetail'>
+    <image src='{{imgSrc}}' class='movie-img'></image>
+      <!-- <text class='movie-title' wx:if="{{nm.length>=6}}">
+     {{nm.substring(0,6)}}
+     </text> 
+    <text class='movie-title' wx:else>{{nm}}</text>   -->
+     <text class='movie-title'>{{name}}</text> 
+    <template is="starsTemplate" data="{{sc:score,stars:stars}}"/>
+  </view>
+</template>

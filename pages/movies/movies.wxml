@@ -1,0 +1,6 @@
+<import src="movie-list/movie-list-template.wxml" />
+<view class='container'>
+  <template is="movieListTemplate" data="{{inTheatersUrl}}"/>
+  <!-- <template is="movieListTemplate" data="{{inTheatersUrl}}"/>
+  <template is="movieListTemplate" data="{{inTheatersUrl}}"/> -->
+</view>

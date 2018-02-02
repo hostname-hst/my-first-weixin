@@ -1,0 +1,9 @@
+<!--pages/hello/hello.wxml-->
+<!-- <text>pages/hello/hello.wxml</text> -->
+<view class='container'> 
+    <image class='avatar' src='/images/avatar/4.png'></image>
+    <text class='user-name'>hello,古月</text>
+  <view class='btn-start' bindtap='ontap'>
+    <text class='start'>开始我的第一个小程序</text>
+  </view>
+</view>

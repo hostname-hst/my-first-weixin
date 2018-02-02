@@ -1,0 +1,13 @@
+<import src="../movie/movie-template.wxml" />
+
+<template name="movieGridTemplate">
+  <scroll-view class='movie-grid-container'
+   scroll-y="ture" scroll-x="false" bindscrolltolower="scrolltolower"
+   >
+    <blcok wx:for="{{inTheatersUrl}}" wx:for-item="movie">
+      <view class='single-movie-container'>
+        <template is="movieTemplate" data="{{...movie}}" />
+      </view>
+    </blcok>
+  </scroll-view>
+</template>
